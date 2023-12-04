@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { Typography } from '@mui/material'
 
+const Home = React.lazy(() => import('./Home'))
+
 const Router = ({ isLoading }) => {
 
     if (isLoading) {
@@ -15,7 +17,7 @@ const Router = ({ isLoading }) => {
         <div>
             <Suspense fallback='Loading...'>
                 <Routes>
-                    <Route />
+                <Route key='home' path='/' element={<Home />} />
                 </Routes>
             </Suspense>
         </div>
