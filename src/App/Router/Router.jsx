@@ -5,6 +5,7 @@ import { Typography } from '@mui/material'
 import About from '../../components/About'
 import Gallery from '../../components/Gallery'
 import Contact from '../../components/Contact/Contact'
+import Map from '../../components/Contact/Map/Map'
 
 const Home = React.lazy(() => import('./Home'))
 
@@ -24,6 +25,8 @@ const Router = ({ isLoading }) => {
                     <Route key='about' path='/about' element={<About />} />
                     <Route key='gallery' path='/gallery' element={<Gallery />} />
                     <Route key='contact' path='/contact' element={<Contact />} />
+                    <Route key='map' path='/map' element={<Map />} />
+
                 </Routes>
             </Suspense>
         </div>
