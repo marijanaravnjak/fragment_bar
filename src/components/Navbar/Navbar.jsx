@@ -16,21 +16,21 @@ const Navbar = () => {
                         to='/about'
                         size='large'
                         color='inherit'>
-                        About
+                        O nama
                     </Button>
                     <Button
                         LinkComponent={Link}
                         to='/gallery'
                         size='large'
                         color='inherit'>
-                        Gallery
+                        Galerija
                     </Button>
                     <Button
                         LinkComponent={Link}
                         to='/contact'
                         size='large'
                         color='inherit'>
-                        Contact
+                        Kontakt
                     </Button>
                 </Stack>
             </Toolbar>
