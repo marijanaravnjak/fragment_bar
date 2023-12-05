@@ -23,7 +23,12 @@ const Contact = () => {
                 <Typography variant='div' noWrap>
                     <Typography variant='h5' padding={3} gutterBottom>Kontakt</Typography>
                     <Typography variant='h6' noWrap gutterBottom>
-                        <LocationOnIcon /> Sremska Mitrovica, Kuzminska 4
+                        <IconButton
+                            href='/map'
+                            size='small'
+                            color='inherit'>
+                            <LocationOnIcon /> Sremska Mitrovica, Kuzminska 4
+                        </IconButton>
                     </Typography>
                     <Grid item xs={2} sm={4} md={4}>
                         <Typography variant='body1' gutterBottom color='GrayText' fontStyle='italic' align='center' padding={3}>Ili nas posetite na</Typography>
