@@ -9,7 +9,7 @@ const Navbar = () => {
                 <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
                     <Avatar src='/fragment-naziv.jpg' />
                 </IconButton>
-                <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>Fragment</Typography>
+                <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>Fragment Bar</Typography>
                 <Stack direction='row' spacing={2}>
                     <Button
                         LinkComponent={Link}
