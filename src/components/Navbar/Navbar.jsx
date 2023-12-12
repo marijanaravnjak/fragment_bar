@@ -64,6 +64,15 @@ const Navbar = () => {
                 transformOrigin={{ horizontal: 'center', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'center', vertical: 'bottom' }}
             >
+                 <MenuItem onClick={handleClose}>
+                    <Button
+                        LinkComponent={Link}
+                        to='/menu-articles'
+                        size='large'
+                        color='inherit'>
+                        Katalog pića
+                    </Button>
+                </MenuItem>
                 <MenuItem onClick={handleClose}>
                     <Button
                         LinkComponent={Link}
