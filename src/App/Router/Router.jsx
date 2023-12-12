@@ -4,8 +4,9 @@ import PropTypes from 'prop-types'
 import { Typography } from '@mui/material'
 import About from '../../components/About'
 import Gallery from '../../components/Gallery'
-import Contact from '../../components/Contact/Contact'
-import Map from '../../components/Contact/Map/Map'
+import Contact from '../../components/Contact'
+import Map from '../../components/Contact/Map'
+import MenuArticles from '../../components/MenuArticles'
 
 const Home = React.lazy(() => import('./Home'))
 
@@ -26,6 +27,7 @@ const Router = ({ isLoading }) => {
                     <Route key='gallery' path='/gallery' element={<Gallery />} />
                     <Route key='contact' path='/contact' element={<Contact />} />
                     <Route key='map' path='/map' element={<Map />} />
+                    <Route key='menu-articles' path='/menu-articles' element={<MenuArticles/>}/>
 
                 </Routes>
             </Suspense>
