@@ -3,12 +3,12 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@
 import { Link } from 'react-router-dom'
 
 const Articles = (article) => {
+
     return (
         <Card sx={{
             maxWidth: 390,
             display: 'flex',
             m: 2,
-            backgroundColor:'',
             borderRadius: '10%',
         }}>
             <CardContent>
@@ -50,7 +50,6 @@ const Articles = (article) => {
                             gutterBottom>
                             saznajte više kroz istoriju
                         </Typography>
-
                     </Button>
                 </CardActions>
             </CardContent>

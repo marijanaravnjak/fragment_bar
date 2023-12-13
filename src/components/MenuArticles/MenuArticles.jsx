@@ -31,7 +31,13 @@ const articles = [
 const MenuArticles = () => {
 
     return (
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center', m: 10 }}>
+        <Box sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            textAlign: 'center',
+            m: 10
+        }}>
             <Grid container>
                 {articles.map((article) => (
                     <Grid item xs={12} sm={6} md={3} key={article.id}>
@@ -47,7 +53,8 @@ const MenuArticles = () => {
                     color='white'
                     fontFamily='cursive'
                     fontSize={18}
-                >Povratak na početnu stranu</Typography>
+                >Povratak na početnu stranu
+                </Typography>
             </Button>
         </Box>
 
