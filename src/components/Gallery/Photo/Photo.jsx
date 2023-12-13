@@ -51,7 +51,7 @@ const Photo = (photo) => {
                         },
                     },
                 }}>
-                <ImageListItem key={photo.img}>
+                <ImageListItem key={photo.id}>
                     <img
                         src={photo.src}
                         alt={photo.title}

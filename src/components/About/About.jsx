@@ -1,12 +1,13 @@
 import React from 'react'
-import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
+import { Card, CardContent, CardMedia, Grid, IconButton, Typography } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 
 const About = () => {
 
     return (
         <Grid container>
-            <Card sx={{ display: 'flex', flexDirection:'row', backgroundColor:'ghostwhite'}}>
+            <Card sx={{ display: 'flex', flexDirection: 'row', backgroundColor: 'ghostwhite' }}>
                 <CardContent >
                     <Grid item xs={12} sm={6} md={6} lg>
                         <Typography component='div' variant='h4' fontFamily='cursive' noWrap>
@@ -29,10 +30,25 @@ const About = () => {
                             <Typography variant='h5' fontFamily='cursive' gutterBottom> I tako je Fragmet zaslužio svoje mesto među „izabranima“...</Typography>
                             <Typography variant='overline'>(izvor https://www.ozon.rs/uncategorized/2021/fragment-bar-dan-pocinje-ovde/)</Typography>
                         </Typography>
+                        <Grid item sx={{ display: 'flex', flexDirection: 'column', fontFamily: 'cursive' }}>
+                            <Typography variant='h5' fontFamily='cursive' align='center'>Fragment</Typography>
+                            <IconButton
+                                LinkComponent={Link}
+                                to={'/video-gallery'}
+                                color='inherit'>
+                                (video)
+                            </IconButton>
+                            <IconButton
+                                LinkComponent={Link}
+                                to={'/'}>
+                                povratak na početnu stranu
+                            </IconButton>
+                        </Grid>
                     </Grid>
+
                 </CardContent>
                 <CardContent>
-                    <CardMedia sx={{ minHeight: 800, minWidth: 300}}
+                    <CardMedia sx={{ minHeight: 800, minWidth: 300 }}
                         component='video'
                         src='fragment.mp4'
                         controls>
