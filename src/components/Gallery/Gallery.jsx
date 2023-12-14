@@ -44,23 +44,63 @@ const photos = [
         id: 'p8',
         src: 'bar5.jpg',
         title: 'bar8',
-    }
+    },
+    {
+        id: 'p9',
+        src: 'ulaz.jpg',
+        title: 'ulaz',
+    }, {
+        id: 'p10',
+        src: 'basta1.jpg',
+        title: 'basta1',
+    },
+    {
+        id: 'p11',
+        src: 'basta2.jpg',
+        title: 'basta2',
+    },
+    {
+        id: 'p12',
+        src: 'case.jpg',
+        title: 'case',
+    },
+
 ]
 
 
 const Gallery = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{
+            flexGrow: 1,
+            boxSizing: 'border-box',
+            width: '100%',
+            height: 'auto',
+            padding: 'auto',
+            justifyContent:'space-around'
+        }}>
             <Button
                 component={Link}
                 to='/'>
-                <Typography variant='overline' fontSize={12} fontFamily='cursive' color='whitesmoke'>Povratak na početnu stranu</Typography>
+                <Typography
+                    variant='overline'
+                    fontSize={12}
+                    fontFamily='cursive'
+                    color='whitesmoke'>
+                    Povratak na početnu stranu
+                </Typography>
             </Button>
-            <Typography  variant='h4' fontFamily='cursive' color='whitesmoke' align='center'>Galerija Fragment bara</Typography>
+            <Typography
+                variant='h4'
+                fontFamily='cursive'
+                color='whitesmoke'
+                align='center'>
+                Galerija Fragment bara
+            </Typography>
             <Grid container
                 columnSpacing={1}
                 rowSpacing={4}
                 columns={{ xs: 4, md: 12, }}>
+
                 {photos.map((photo) => (
                     <Grid item xs={1} sm={2} md={3} key={photo.id}>
                         <Photo key={photo.id}  {...photo} />
