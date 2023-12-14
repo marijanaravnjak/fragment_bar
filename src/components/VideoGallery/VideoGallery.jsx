@@ -20,7 +20,11 @@ const VideoGallery = () => {
 
     return (
         <Box
-            sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0 }}>
+            sx={{
+                display: 'flex',
+                gap: 2,
+                flexWrap: 'wrap', p: 0, m: 0
+            }}>
             <IconButton
                 LinkComponent={Link}
                 to={'/'}>
@@ -42,7 +46,6 @@ const VideoGallery = () => {
                     </Grid>
                 ))}
             </Grid>
-
         </Box>
     )
 }
