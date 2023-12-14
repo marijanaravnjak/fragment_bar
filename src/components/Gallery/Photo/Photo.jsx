@@ -7,7 +7,7 @@ const Photo = (photo) => {
         <Box sx={{
             width: 470,
             height: 350,
-            ml:2
+            ml: 2
         }}>
             <ImageList
                 key={photo.id}
@@ -41,7 +41,6 @@ const Photo = (photo) => {
                         animationFillMode: 'none',
                         animationPlayState: 'running',
                     },
-
                     '&:@keyframes stretch': {
                         '0%': {
                             transform: 'scale(.3)',

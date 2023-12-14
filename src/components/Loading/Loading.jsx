@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 
 const Loading = ({ loading }) => {
-    
+
     return (
 
         <Box sx={{
@@ -15,7 +15,7 @@ const Loading = ({ loading }) => {
             opacity: 0.7
         }}>
             {loading &&
-                <><Skeleton  variant='rectangular'    animation='wave' />
+                <><Skeleton variant='rectangular' animation='wave' />
                     <CircularProgress style={{ width: 300, height: 300, margin: '18%' }} />
                 </>}
         </Box>

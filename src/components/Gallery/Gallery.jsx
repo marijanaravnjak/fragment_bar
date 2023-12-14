@@ -69,7 +69,9 @@ const photos = [
 
 
 const Gallery = () => {
+
     return (
+
         <Box sx={{
             flexGrow: 1,
             boxSizing: 'border-box',
@@ -83,7 +85,7 @@ const Gallery = () => {
                 to='/'>
                 <Typography
                     variant='overline'
-                    fontSize={12}
+                    fontSize={16}
                     fontFamily='cursive'
                     color='whitesmoke'>
                     Povratak na početnu stranu
@@ -100,7 +102,6 @@ const Gallery = () => {
                 columnSpacing={1}
                 rowSpacing={4}
                 columns={{ xs: 4, md: 12, }}>
-
                 {photos.map((photo) => (
                     <Grid item xs={1} sm={2} md={3} key={photo.id}>
                         <Photo key={photo.id}  {...photo} />

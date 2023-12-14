@@ -38,14 +38,7 @@ const MenuArticles = () => {
             textAlign: 'center',
             m: 10
         }}>
-            <Grid container justifyContent='space-around'>
-                {articles.map((article) => (
-                    <Grid item xs={12} sm={6} md={3} key={article.id} >
-                        <Articles key={article.id} {...article} />
-                    </Grid>
-                ))}
-            </Grid>
-            <Button
+             <Button
                 LinkComponent={Link}
                 to={'/'}
                 size='small'>
@@ -56,6 +49,14 @@ const MenuArticles = () => {
                 >Povratak na početnu stranu
                 </Typography>
             </Button>
+            <Grid container justifyContent='space-around'>
+                {articles.map((article) => (
+                    <Grid item xs={12} sm={6} md={3} key={article.id} >
+                        <Articles key={article.id} {...article} />
+                    </Grid>
+                ))}
+            </Grid>
+           
         </Box>
 
     )

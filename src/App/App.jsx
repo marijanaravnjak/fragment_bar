@@ -16,7 +16,8 @@ function App() {
     }, [])
 
     return (
-        <Box>
+        
+        <Box sx={{flexGrow:1}}>
             <Router isLoading={loading} />
         </Box >
     )
