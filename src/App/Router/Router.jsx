@@ -30,7 +30,6 @@ const Router = ({ isLoading }) => {
                     <Route key='map' path='/map' element={<Map />} />
                     <Route key='menu-articles' path='/menu-articles' element={<MenuArticles />} />
                     <Route key='video-gallery' path='/video-gallery' element={<VideoGallery />} />
-
                 </Routes>
             </Suspense>
         </div>

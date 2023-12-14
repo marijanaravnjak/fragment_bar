@@ -1,10 +1,14 @@
 import React, { memo } from 'react'
 import Navbar from '../../../components/Navbar/Navbar'
+import { Box } from '@mui/material'
 
 const Home = () => {
+    
     return (
 
-        <div><Navbar/></div>
+        <Box sx={{ flexGrow:1 }}>
+            <Navbar/>
+        </Box>
     )
 }
 export default memo(Home)

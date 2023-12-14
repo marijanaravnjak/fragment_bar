@@ -15,14 +15,26 @@ const Map = () => {
 
 
     return (
-        
+
         <Box
             sx={{
                 p: 6,
                 borderRadius: 2,
                 maxWidth: 500,
-                opacity: 0.9
+                opacity: 0.9,
             }}>
+            <IconButton
+                component={Link}
+                to='/'
+                size='small'
+                color='inherit'>
+                <Typography
+                    variant='button'
+                    fontSize={16}
+                    color={'white'}>
+                    Povratak na početnu stranu
+                </Typography>
+            </IconButton>
             {loading ?
                 (<Loading loading={loading} />) :
                 (<iframe title='map'
@@ -33,18 +45,6 @@ const Map = () => {
                     allowfullscreen=''
                     referrerpolicy='no-referrer-when-downgrade'>
                 </iframe>)}
-            <IconButton
-                component={Link}
-                to='/'
-                size='small'
-                color='inherit'>
-                <Typography
-                    variant='button'
-                    fontSize={15}
-                    color={'white'}>
-                    Povratak na početnu stranu
-                </Typography>
-            </IconButton>
         </Box>
     )
 }

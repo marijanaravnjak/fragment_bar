@@ -45,10 +45,9 @@ const About = () => {
                             </IconButton>
                         </Grid>
                     </Grid>
-
                 </CardContent>
                 <CardContent>
-                    <CardMedia sx={{ minHeight: 800, minWidth: 300 }}
+                    <CardMedia sx={{ minHeight: 800, minWidth: 300, }}
                         component='video'
                         src='fragment.mp4'
                         controls>
