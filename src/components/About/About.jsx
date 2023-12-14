@@ -28,7 +28,7 @@ const About = () => {
                             <Typography variant='h5' fontFamily='cursive' gutterBottom>Često Fragment završi na mnogim Instagram profilima,</Typography>
                             <Typography variant='h5' fontFamily='cursive' gutterBottom>fotke se dele...</Typography>
                             <Typography variant='h5' fontFamily='cursive' gutterBottom> I tako je Fragmet zaslužio svoje mesto među „izabranima“...</Typography>
-                            <Typography variant='overline'>(izvor https://www.ozon.rs/uncategorized/2021/fragment-bar-dan-pocinje-ovde/)</Typography>
+                            <Typography variant='overline'>(preuzeto sa https://www.ozon.rs/uncategorized/2021/fragment-bar-dan-pocinje-ovde/)</Typography>
                         </Typography>
                         <Grid item sx={{ display: 'flex', flexDirection: 'column', fontFamily: 'cursive' }}>
                             <Typography variant='h5' fontFamily='cursive' align='center'>Fragment</Typography>

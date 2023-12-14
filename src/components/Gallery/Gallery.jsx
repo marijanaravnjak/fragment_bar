@@ -76,7 +76,7 @@ const Gallery = () => {
             width: '100%',
             height: 'auto',
             padding: 'auto',
-            justifyContent:'space-around'
+            justifyContent: 'space-around'
         }}>
             <Button
                 component={Link}
