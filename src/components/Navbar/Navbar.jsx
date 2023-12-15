@@ -31,10 +31,11 @@ const Navbar = () => {
                         sx={{
                             '@media(max-width:600px)':
                                 { display: 'none' }
-                        }}
-                    >
-                        <img alt='fragment' src={`url(${process.env.PUBLIC_URL + '/navbar.png'})`}/>
+                        }}>
+                        <img alt='fragment' src='/fragment_bar/navbar.png'/>
                     </IconButton>
+                </Tooltip>
+                <Tooltip title='Kliknite za više informacija'>
                     <IconButton
                         onClick={handleClick}
                         size='small'
@@ -46,8 +47,8 @@ const Navbar = () => {
                         aria-expanded={open ? 'true' : undefined}
                         sx={{ display: { sm: 'none' } }}
                     >
-                        <img alt='logo' src={`url(${process.env.PUBLIC_URL + '/logo.png'})`} style={{ weight: 60, height: 60 }} />
-                    </IconButton>
+                        <img alt='logo' src='/fragment_bar/logo.png' style={{ weight: 60, height: 60 }} />
+                    </IconButton> 
                 </Tooltip>
                 <Menu
                     anchorEl={anchorEl}
