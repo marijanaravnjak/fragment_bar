@@ -33,7 +33,7 @@ const Navbar = () => {
                                 { display: 'none' }
                         }}
                     >
-                        <img alt='fragment-ime' src={`url(${process.env.PUBLIC_URL + './fragment.png'})`} />
+                        <img alt='fragment' src={`url(${process.env.PUBLIC_URL + '/navbar.png'})`}/>
                     </IconButton>
                     <IconButton
                         onClick={handleClick}
@@ -46,7 +46,7 @@ const Navbar = () => {
                         aria-expanded={open ? 'true' : undefined}
                         sx={{ display: { sm: 'none' } }}
                     >
-                        <img alt='logo' src={`url(${process.env.PUBLIC_URL + './logo.png'})`} style={{ weight: 60, height: 60 }} />
+                        <img alt='logo' src={`url(${process.env.PUBLIC_URL + '/logo.png'})`} style={{ weight: 60, height: 60 }} />
                     </IconButton>
                 </Tooltip>
                 <Menu
