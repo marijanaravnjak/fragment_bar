@@ -10,7 +10,7 @@ const fragments = [
         title: 'fragment od 2017. do 2021.'
     },
     {
-        id: 3,
+        id: 2,
         src: 'žurka1.mp4',
         title: 'fragment žurka'
     },

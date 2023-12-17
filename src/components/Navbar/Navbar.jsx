@@ -29,10 +29,30 @@ const Navbar = () => {
                         aria-haspopup="true"
                         aria-expanded={open ? 'true' : undefined}
                         sx={{
+                            '@media(max-width:1024px)':
+                                { display: 'none' }
+                        }}>
+                        <img alt='fragment' src='/fragment_bar/navbar.png' />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title='Kliknite za više informacija'>
+                    <IconButton
+                        onClick={handleClick}
+                        size='small'
+                        edge='start'
+                        color='inherit'
+                        aria-label='logo'
+                        aria-controls={open ? 'fragment-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        sx={{
+                            '@media(min-width:1024px)':
+                                { display: 'none' },
                             '@media(max-width:600px)':
                                 { display: 'none' }
                         }}>
-                        <img alt='fragment' src='/fragment_bar/navbar.png'/>
+                        <img alt='fragment' src='/fragment_bar/navbar.png'
+                            style={{ weight: 400, height: 100 }} />
                     </IconButton>
                 </Tooltip>
                 <Tooltip title='Kliknite za više informacija'>
@@ -47,8 +67,9 @@ const Navbar = () => {
                         aria-expanded={open ? 'true' : undefined}
                         sx={{ display: { sm: 'none' } }}
                     >
-                        <img alt='logo' src='/fragment_bar/logo.png' style={{ weight: 60, height: 60 }} />
-                    </IconButton> 
+                        <img alt='logo' src='/fragment_bar/logo.png'
+                            style={{ weight: 60, height: 60 }} />
+                    </IconButton>
                 </Tooltip>
                 <Menu
                     anchorEl={anchorEl}
