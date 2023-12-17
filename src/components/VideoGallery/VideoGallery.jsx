@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Grid, IconButton, Typography } from '@mui/material'
+import { Box, Button, Grid, Typography } from '@mui/material'
 import VideoCard from './VideoCard'
 
 const fragments = [
@@ -32,23 +32,22 @@ const VideoGallery = () => {
                 p: 0,
                 m: 0
             }}>
-            <IconButton
+            <Button
                 LinkComponent={Link}
-                to={'/'}>
+                to={'/'}
+                size='small'>
                 <Typography
                     variant='h5'
                     color='white'
-                    fontFamily='cursive'>
-                    povratak na početnu stranu
+                    fontFamily='cursive'
+                    fontSize={18}
+                >
+                    Povratak na početnu stranu
                 </Typography>
-            </IconButton>
-            <Grid container
-                columnSpacing={1}
-                rowSpacing={4}
-                columns={{ xs: 4, md: 12, }}
-                justifyContent='space-around'>
+            </Button>
+            <Grid container justifyContent='space-around'>
                 {fragments.map((fragment) => (
-                    <Grid item xs={1} sm={2} md={3} key={fragment.id}>
+                    <Grid item xs={12} sm={6} md={3} key={fragment.id}>
                         <VideoCard key={fragment.id}  {...fragment} />
                     </Grid>
                 ))}
