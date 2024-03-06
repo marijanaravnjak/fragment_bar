@@ -1,63 +1,75 @@
-import React from 'react'
-import { Box, ImageList, ImageListItem } from '@mui/material'
+import React, { useState } from 'react'
+import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
+import ImageList from '@mui/material/ImageList'
+import ImageListItem from '@mui/material/ImageListItem'
 
 const Photo = (photo) => {
 
+    const [viewImg, setViewImg] = useState(true)
+
+    const handleViewImg = () => {
+        setViewImg(!viewImg)
+    }
+
     return (
-        <Box sx={{
-            width: 470,
-            height: 350,
-            ml: 2
-        }}>
-            <ImageList
-                key={photo.id}
-                sx={{
-                    width: 600,
-                    height: 350,
-                    ml: '10',
-                    overflow: 'hidden',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: '999',
-                    cursor: 'pointer',
-                    WebkitTransitionProperty: 'all',
-                    WebkitTransitionDuration: '0.7s',
-                    WebkitTransitionTimingFunction: 'ease',
-                    '&:hover': {
-                        position: 'absolute',
-                        transform: 'scale(2)',
-                        zIndex: 2,
-                        overflow: 'visible',
-                        height: '250px',
-                        width: '250px',
-                        margin: '10 auto',
-                        animationName: 'stretch',
-                        animationDuration: '1.5s',
-                        animationTimingFunction: 'ease-out',
-                        animationDelay: '0',
-                        animationDirection: 'alternate',
-                        animationIterationCount: 'infinite',
-                        animationFillMode: 'none',
-                        animationPlayState: 'running',
-                    },
-                    '&:@keyframes stretch': {
-                        '0%': {
-                            transform: 'scale(.3)',
-                        },
-                        '100%': {
-                            transform: 'scale(2.5)',
-                        },
-                    },
-                }}>
-                <ImageListItem key={photo.id}>
-                    <img
-                        src={photo.src}
-                        alt={photo.title}
-                    />
-                </ImageListItem>
-            </ImageList>
-        </Box >
+        <Container
+            maxWidth='100%'
+            onClick={handleViewImg}>
+            {viewImg ?
+                (<Box>
+                    <ImageList
+                        key={photo.id}
+                        sx={{
+                            width: 500,
+                            height: 350,
+                            border: '1px solid dodgerblue',
+                            overflow: 'hidden',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer',
+                            WebkitTransitionProperty: 'all',
+                            WebkitTransitionDuration: '0.7s',
+                            WebkitTransitionTimingFunction: 'ease'
+                        }} >
+                        <img
+                            src={photo.src}
+                            alt={photo.title}
+                        />
+
+                    </ImageList>
+                </Box>) :
+                (<Box>
+                    <ImageList
+                        sx={{
+                            position: 'relative',
+                            display: 'flex',
+                            zIndex: 100,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            overflow: 'visible',
+                            marginTop: 0,
+
+
+                        }}>
+                        <ImageListItem>
+                            <img
+                                src={photo.src}
+                                alt={photo.title}
+                                style={{
+                                    width: '1000px',
+                                    height: '800px',
+                                    marginTop: 0,
+                                }}
+                            />
+                        </ImageListItem>
+
+                    </ImageList>
+
+                </Box >
+                )}
+        </Container>
     )
 }
 

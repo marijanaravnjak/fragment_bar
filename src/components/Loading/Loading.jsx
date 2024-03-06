@@ -1,5 +1,8 @@
 import React from 'react'
-import { Box, CircularProgress, Skeleton } from '@mui/material'
+import Box from '@mui/material/Box'
+import CircularProgress from '@mui/material/CircularProgress'
+import Skeleton from '@mui/material/Skeleton'
+
 import PropTypes from 'prop-types'
 
 

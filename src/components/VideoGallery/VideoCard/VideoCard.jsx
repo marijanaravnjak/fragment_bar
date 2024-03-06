@@ -1,15 +1,21 @@
 import React from 'react'
-import { Card, CardContent, CardMedia, Typography } from '@mui/material'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import Typography from '@mui/material/Typography'
+
 
 
 const VideoCard = (fragment) => {
 
-    return (
+    return ( 
+        
         <Card sx={{
             maxWidth: 390,
             display: 'flex',
             m: 2,
-            borderRadius: '10%'
+            borderRadius: '10%',
+            justifyContent: 'center'
         }}>
             <CardContent>
                 <CardMedia

@@ -1,25 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Button, Grid, Typography } from '@mui/material'
-import VideoCard from './VideoCard'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 
-const fragments = [
-    {
-        id: 1,
-        src: 'fragment-selidba.MP4',
-        title: 'fragment od 2017. do 2021.'
-    },
-    {
-        id: 2,
-        src: 'žurka1.mp4',
-        title: 'fragment žurka'
-    },
-    {
-        id: 3,
-        src: 'fragment-žurka.mp4',
-        title: 'fragment žurka'
-    },
-]
+import VideoCard from './VideoCard'
+import { fragments } from '../images'
 
 const VideoGallery = () => {
 
@@ -45,9 +32,16 @@ const VideoGallery = () => {
                     Povratak na početnu stranu
                 </Typography>
             </Button>
-            <Grid container justifyContent='space-around'>
+            <Grid
+                container
+                justifyContent='space-around'>
                 {fragments.map((fragment) => (
-                    <Grid item xs={12} sm={6} md={3} key={fragment.id}>
+                    <Grid
+                        key={fragment.id}
+                        item
+                        xs={12}
+                        sm={6}
+                        md={3} >
                         <VideoCard key={fragment.id}  {...fragment} />
                     </Grid>
                 ))}

@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
 import About from '../../components/About'
 import Gallery from '../../components/Gallery'
 import Contact from '../../components/Contact'
